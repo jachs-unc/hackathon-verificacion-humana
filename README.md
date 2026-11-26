@@ -1,10 +1,24 @@
-# <Nombre oficial del proyecto>
+# Verificación Humana Soberana
+
+## Estado actual
+
+La base inicial incluye FastAPI, Docker Compose y una prueba básica de salud. Aún faltan los endpoints de desafío, el modelo local, el widget, JWT y la consola administrativa.
+
+## Arranque rápido
+
+```bash
+cd /home/estudiante/Documentos/hackaton/hackathon-verificacion-humana
+cp .env.example .env
+docker compose up --build
+```
+
+Comprueba el servicio en `http://localhost:8000/health`.
 
 ## 1. Nombre del proyecto
 
-**<Nombre oficial de la solución>**
+**Verificación Humana Soberana**
 
-<Breve frase que resuma qué hace la solución, por ejemplo: “Servicio autónomo de verificación humana y mitigación de bots, ejecutable en infraestructura local y sin dependencias de proveedores privativos”.>
+Servicio local de verificación humana y mitigación de bots con infraestructura soberana, modular y auditable.
 
 ## 2. Participantes
 
@@ -13,7 +27,7 @@
 | Valentin <Apellido> | Líder de ciberseguridad y criptografía | Seguridad, JWT, OWASP, auditoría, SBOM |
 | Guillermo <Apellido> | Líder de infraestructura, borde y despliegue | Docker, reverse proxy, rate limiting, CI |
 | Joci <Apellido> | Líder de IA conductual y observabilidad | Dataset, modelo local, métricas, dashboards |
-| Chávez <Apellido> | Líder de backend, integración y widget | API central, widget SDK, README, demo |
+| José Chávez | Líder de backend, integración y widget | API central, widget SDK, README, demo |
 
 ## 3. Descripción del proyecto
 
@@ -85,3 +99,4 @@ RATE_LIMIT_REQUESTS=60
 RATE_LIMIT_WINDOW_SECONDS=60
 ADMIN_USER=<usuario_admin>
 ADMIN_PASSWORD_HASH=<hash_seguro>
+```
