@@ -1,0 +1,10 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: verificacion-humana-backend
+    env_file:
+      - .env
+    ports:
+      - "${APP_PORT:-8000}:8000"
+    restart: unless-stopped
